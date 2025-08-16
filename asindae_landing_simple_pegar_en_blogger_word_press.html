@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASINDAÉ — Mayorista desde 1 unidad</title>
+  <meta name="description" content="Ropa, calzados, bazar, juguetería, librería, blanquería y más. Envíos a todo el país. Paso de la Patria." />
+  <meta property="og:title" content="ASINDAÉ — Mayorista desde 1 unidad" />
+  <meta property="og:description" content="Ropa, calzados, bazar, juguetería, librería, blanquería y más. Envíos a todo el país. Paso de la Patria." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#FFDF00" />
+  <style>
+    :root { --yellow:#FFDF00; --black:#111111; --white:#ffffff; }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--yellow);color:var(--black);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    .nav{position:sticky;top:0;z-index:50;background:var(--yellow);border-bottom:1px solid rgba(0,0,0,.1)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .brand img{height:36px;width:36px;border-radius:8px;border:1px solid rgba(0,0,0,.1);object-fit:cover}
+    .actions{display:flex;gap:8px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:14px;font-weight:700;border:1px solid rgba(0,0,0,.2);transition:transform .2s ease, box-shadow .2s ease}
+    .btn.primary{background:var(--black);color:#fff;border-color:transparent}
+    .btn.secondary{background:#fff;color:var(--black)}
+    .btn:hover,.btn:focus{transform:scale(1.05);box-shadow:0 6px 20px rgba(0,0,0,.15)}
+
+    header.hero{padding:48px 0}
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:24px}
+    @media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:#000;color:#fff;font-weight:700;font-size:13px;border-radius:999px;padding:6px 10px}
+    h1{font-size:clamp(32px,4vw,56px);line-height:1.05;margin:10px 0 0}
+    .lead{margin-top:12px;font-size:clamp(16px,2.5vw,20px)}
+    .hero-img{width:100%;aspect-ratio:16/9;border-radius:24px;box-shadow:0 15px 45px rgba(0,0,0,.25);object-fit:cover;background:#00000010;border:1px solid rgba(0,0,0,.2)}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .tag{padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.15);font-size:13px}
+
+    .bar{border-top:1px solid rgba(0,0,0,.1);border-bottom:1px solid rgba(0,0,0,.1);background:var(--yellow)}
+    .bar-inner{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:center;padding:12px 0;font-weight:600;font-size:14px}
+
+    main{padding:48px 0}
+    .grid{display:grid;gap:24px}
+    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    .card{background:#fff;border:1px solid rgba(0,0,0,.15);border-radius:18px;padding:18px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+    .card h3{margin:0 0 6px;font-size:18px}
+    .cta-wrap{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+
+    .video-embed{background:#fff;border:1px solid rgba(0,0,0,.15);border-radius:18px;padding:12px}
+    .video-embed .hint{font-size:13px;opacity:.75;margin:6px 0 10px}
+    .video-embed iframe,.video-embed video{width:100%;aspect-ratio:16/9;border:0;border-radius:12px;background:#000}
+
+    footer{border-top:1px solid rgba(0,0,0,.1);background:var(--yellow);margin-top:32px}
+    footer .cols{display:grid;gap:18px;padding:20px 0}
+    @media(min-width:900px){footer .cols{grid-template-columns:1fr 1fr 1fr}}
+    footer .copy{text-align:center;font-size:12px;opacity:.8;padding-bottom:24px}
+  
+    /* ——— Mobile-first tweaks ——— */
+    @media (max-width: 720px) {
+      .container{padding:0 12px}
+      .nav-inner{height:56px; gap:8px}
+      .brand span{font-size:18px}
+      .actions{flex-wrap:wrap; width:auto}
+      .actions .btn{padding:12px 14px; font-size:15px}
+      header.hero{padding:28px 0}
+      .hero-img{border-radius:16px; max-height:60vh; object-position:center 35%}
+      .tag{font-size:12px; padding:5px 10px}
+      .cta-wrap{gap:8px}
+    }
+
+    /* Botones de ancho completo opcional en teléfonos estrechos */
+    @media (max-width: 420px){
+      .actions{width:100%; justify-content:flex-end}
+      .actions .btn{flex:1 1 auto; text-align:center}
+      .cta-wrap .btn{width:100%; justify-content:center}
+      h1{font-size:32px}
+      .lead{font-size:16px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra/Navegación -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="https://www.asindae.com.ar" target="_blank" rel="noopener">
+        <img src="https://ugc.production.linktr.ee/DBjiyRjbSvCXJu7VNbRL_2c3274iYFSD39p7w?io=true&size=avatar-v3_0" alt="ASINDAÉ - logo" />
+        <span>ASINDAÉ</span>
+      </a>
+      <div class="actions">
+        <a class="btn primary" href="https://whatsapp.com/channel/0029VaizYHQ9RZAcJid2KW0I" target="_blank" rel="noopener">Seguir canal</a>
+        <a class="btn secondary" href="https://maps.app.goo.gl/aiJog7EcKYNaTQth9" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Héroe -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">🚚 Envíos a todo el país</span>
+        <h1>Mayorista desde 1 unidad</h1>
+        <p class="lead">Polirubro en <strong>Paso de la Patria</strong>: ropa, calzados, bazar, juguetería, librería, blanquería y más. ¡Precio mayorista desde un artículo!</p>
+        <div class="cta-wrap">
+          <a class="btn secondary" href="https://www.asindae.com.ar" target="_blank" rel="noopener">Ver web oficial</a>
+          <a class="btn primary" href="https://whatsapp.com/channel/0029VaizYHQ9RZAcJid2KW0I" target="_blank" rel="noopener">Unirme al canal</a>
+        </div>
+        <div class="tags">
+          <span class="tag">Ropa</span>
+          <span class="tag">Calzados</span>
+          <span class="tag">Bazar</span>
+          <span class="tag">Juguetería</span>
+          <span class="tag">Librería</span>
+          <span class="tag">Blanquería</span>
+          <span class="tag">Hogar</span>
+        </div>
+      </div>
+      <div>
+        <!-- Cambiá el src por tu foto desde Blogger/WordPress (o dejá este placeholder) -->
+        <img class="hero-img" alt="ASINDAÉ — fachada/hero"
+             src="https://raw.githubusercontent.com/yesperono/IMAGENASINDA/d18045eade6f13623dc47fc99c763e63443ea44d/20250809_183541.jpg"
+             loading="lazy" decoding="async"
+             sizes="(min-width: 900px) 50vw, 100vw" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Barra informativa -->
+  <div class="bar">
+    <div class="container bar-inner">
+      <div>🕘 Horario: 9 a 21 hs</div>
+      <div>📅 También domingos</div>
+      <div>🪙 Mayorista desde 1 artículo</div>
+      <div>🚚 Envíos a todo el país</div>
+    </div>
+  </div>
+
+  <!-- Contenido -->
+  <main>
+    <div class="container grid">
+      <section>
+        <h2 style="margin:0 0 8px;font-size:24px">Dónde estamos</h2>
+        <p>📍 <strong>25 de Mayo y San Luis</strong>, a pasitos del anfiteatro de <strong>Paso de la Patria</strong>, Corrientes.</p>
+        <div class="cta-wrap">
+          <a class="btn primary" href="https://maps.app.goo.gl/aiJog7EcKYNaTQth9" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn secondary" href="https://www.asindae.com.ar" target="_blank" rel="noopener">Conocer artículos</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container cols">
+      <div>
+        <h4 style="margin:8px 0 6px">ASINDAÉ</h4>
+        <div>25 de Mayo y San Luis — Paso de la Patria, Corrientes</div>
+        <div>Horario: 9 a 21 hs · También domingos</div>
+      </div>
+      <div>
+        <h4 style="margin:8px 0 6px">Accesos</h4>
+        <div><a href="https://www.asindae.com.ar" target="_blank" rel="noopener">Web oficial</a></div>
+        <div><a href="https://whatsapp.com/channel/0029VaizYHQ9RZAcJid2KW0I" target="_blank" rel="noopener">Canal de WhatsApp</a></div>
+        <div><a href="https://maps.app.goo.gl/aiJog7EcKYNaTQth9" target="_blank" rel="noopener">Cómo llegar (Google Maps)</a></div>
+      </div>
+      <div>
+        <h4 style="margin:8px 0 6px">Categorías</h4>
+        <div>Ropa · Calzados · Bazar · Juguetería · Librería · Blanquería · Hogar</div>
+      </div>
+    </div>
+    <div class="copy">© <span id="y"></span> ASINDAÉ — Todos los derechos reservados.</div>
+  </footer>
+
+  <script>
+    // Año automático en el footer (no requiere librerías)
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
